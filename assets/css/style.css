@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #ece5eb;
+    background-color: #f1dbee;
 }
 
 header {
@@ -16,6 +23,7 @@ header {
 }
 
 #img-melissa {
+    margin: 10vh;
     width: 13vh;
     border-radius: 100%;
 }
@@ -37,4 +45,72 @@ header {
 #cargo {
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#espaco1 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+#espaco2 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#espaco3 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#botao {
+    width: 20vh;
+    border-radius: 1vh;
+    background-color: rgb(250, 190, 227);
+    margin: 10vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section1{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#sobre-mim {
+ margin-top: 6vh;
+ background-color: #ebabc2;
+ width: 50%;
+ height: 20vh;
+ border-radius: 4vh;
+ display: flex;
+ align-items: center;
+ justify-content: baseline;
+ flex-direction: column;
+ gap: 1.5vh 
+}
+
+#titulo-sobre-mim {
+    margin-top: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#texto-sobre-mim {
+    margin: 8vh;
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.6vh;
+    font-family: "Open Sans", sans-serif;
 }
