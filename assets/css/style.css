@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f1dbee;
+    font-family: "Outfit", sans-serif;
 }
 
 header {
@@ -38,13 +38,11 @@ header {
 
 #nome {
     margin-top: 2vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
 }
 
 #cargo {
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 #espaco1 {
@@ -72,15 +70,26 @@ header {
 }
 
 #botao {
-    width: 20vh;
-    border-radius: 1vh;
+    width: 25vh;
+    height: 4vh;
+    border-radius: 3vh;
+    font-size: 2vh;
+    font-family: "Outfit", sans-serif;
     background-color: rgb(250, 190, 227);
     margin: 10vh;
     color: black;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+#botao:hover {
+    transform:scale(1.05)
+}
+
+/*main*/
 
 #section1{
  display: flex;
@@ -88,10 +97,18 @@ header {
  justify-content: center;
 }
 
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #sobre-mim {
  margin-top: 6vh;
  background-color: #ebabc2;
- width: 50%;
+ width:75%;
  height: 20vh;
  border-radius: 4vh;
  display: flex;
@@ -101,16 +118,219 @@ header {
  gap: 1.5vh 
 }
 
-#titulo-sobre-mim {
-    margin-top: 3vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#habilidades {
+ margin-top: 6vh;
+ background-color: #ebabc2;
+ width: 75%;
+ height: 20vh;
+ border-radius: 4vh;
+ display: flex;
+ align-items: center;
+ justify-content: baseline;
+ flex-direction: column;
+ gap:3vh 
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    justify-content: center;
+}
 
-#texto-sobre-mim {
+li {
+    background-color: #f1dbee;
+    border-radius: 0.6vh;
+    min-width:29vh;
+    height: 5vh;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:hover {
+    transform: translateX(0.5VH);
+    transition: all 0.5s ease;
+}
+
+#contato {
+ margin-top: 6vh;
+ background-color: #ebabc2;
+ width: 75%;
+ height: 20vh;
+ border-radius: 4vh;
+ display: flex;
+ align-items: center;
+ justify-content: baseline;
+ flex-direction: column;
+ gap:3vh 
+}
+
+#texto-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.texto-bloco-contato {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#contato a {
+    background-color: #f1dbee;
+    color: black;
+    text-decoration: none;
+    width: 11vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vh;
+    border: 0.2vh solid #bc034b;
+}
+
+#contato a:hover {
+    transform:scale(1.1);
+}
+
+.titulo-blocos {
+    margin-top: 3vh;
+    border-bottom: 3px solid #bc034b;
+}
+
+.texto-blocos {
     margin: 8vh;
     margin-top: 0;
     text-align: center;
     font-size: 1.6vh;
-    font-family: "Open Sans", sans-serif;
+}
+
+/*MODOS*/
+
+body.claro {
+    background-color: #f1dbee;
+    color: black;
+}
+
+body.escuro {
+    background-color: black;
+    color: white;
+}
+
+body.escuro #sobre-mim,
+body.escuro #habilidades,
+body.escuro #contato
+{
+    background-color:#383335
+}
+
+body.escuro li {
+    background-color: black
+}
+
+body.escuro a {
+    background-color: black
+}
+
+/*footer*/
+
+footer {
+    margin-top: 5vh;
+    background-color: #bc034b;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    /*header*/
+    header {
+        height: auto;
+        flex-direction: column;
+        gap: 2vh;
+        padding: 2vh 0;
+        text-align: center;
+    }
+
+    #img-melissa {
+        margin: 0;
+        width: 8vh;
+        height: auto;
+    }
+
+    #botao {
+        width: 20vh;
+        height: 4vh;
+        font-size: 1.8vh;
+        margin: 5vh;
+    }
+
+    #informacoes {
+        text-align: center;
+        align-items: center;
+    }
+     
+    #espaco1, #espaco2, #espaco3 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /*main*/
+  #sobre-mim,
+  #habilidades,
+  #contato {
+    width: 90%;
+    height: auto;
+    gap: 2vh;
+    padding: 2vh 0;
+  }
+
+  .titulo-blocos {
+    font-size: 2.2vh;
+    margin-bottom: 1vh;
+  }
+
+  .texto-blocos {
+    font-size: 1.8vh;
+    margin: 3vh 4vh;
+  }
+
+  ul {
+    gap: 1vh;
+  }
+
+  li {
+    min-width: 40vh;
+    height: 6vh;
+    font-size: 2vh;
+  }
+
+  #texto-contato {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .texto-bloco-contato {
+    font-size: 1.8vh;
+  }
+
+  #contato a {
+    width: 18vh;
+    height: 5vh;
+    font-size: 2vh;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 1.6vh;
+    text-align: center;
+  }
 }
